@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <title>Adaptive version</title>
+  <link rel="stylesheet" type="text/css" href="css/main.min.css">
+<!--   <style>
+    html {
+      background-image: url("../src/layout/mobile.png");
+      background-position: 50% 0;
+      background-repeat: no-repeat;
+    }
+    @media (min-width: 768px) {
+      html {
+        background-image: url("../src/layout/tablet.png");
+      }
+    }
+    @media (min-width: 1200px) {
+      html {
+        background-image: url("../src/layout/desktop.png");
+      }
+    }
+  </style>
+  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+  <script src="../node_modules/pixel-glass/script.js"></script> -->
+</head>
+<body>
+  <header class="page-header">
+    <h1 class="visually-hidden">Барбершоп «Бородинский» - истинно мужская классика</h1>
+    <div class="page-header__logo">
+      <picture>
+        <source media="(min-width: 1200px)"
+          srcset="img/logotype-desktop.svg">
+        <source media="(min-width: 768px)"
+          srcset="img/logotype-tablet.svg">
+        <img src="img/logotype-mobile.svg"
+          width-"370" height-"153" alt="Барбершоп «Бородинский»">
+      </picture>
+    </div>
+
+    <nav class="main-nav  main-nav--closed  main-nav--nojs">
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item  main-nav__item--active"><a>Главная</a></li>
+          <li class="main-nav__item"><a href="#">Наши работы</a></li>
+          <li class="main-nav__item"><a href="#">Записаться</a></li>
+          <li class="main-nav__item"><a href="#">Контакты</a></li>
+          <li class="main-nav__item"><a href="#">HTML Academy</a></li>
+        </ul>
+        <ul class="main-nav__user-list">
+          <li class="main-nav__user-item"><a class="main-nav__user-login" href="#" title="Войти">Вход</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section class="stats">
+      <header class="stats__header">
+        <h2 class="stats__title  visually-hidden">Статистика Барбершопа</h2>
+        <b class="stats__slogan">Стрижка у нас<br> это выгодно!</b>
+        <p class="stats__intro">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
+        <small class="stats__legend  stats__legend--top"><sup>*</sup> — приведённые данные ложь</small>
+      </header>
+
+      <table class="stats__table">
+        <tr>
+          <td class="stats__value">1 500<sup>*</sup></td>
+          <td class="stats__field">рублей<br> вложений</td>
+        </tr>
+        <tr>
+          <td class="stats__value">7 200</td>
+          <td class="stats__field">секунд<br> времени мастера</td>
+        </tr>
+        <tr>
+          <td class="stats__value">90 000</td>
+          <td class="stats__field">постриженных<br> волос</td>
+        </tr>
+        <tr>
+          <td class="stats__value">500 000<sup>*</sup></td>
+          <td class="stats__field">лайков<br> и комплиментов</td>
+        </tr>
+      </table>
+
+      <small class="stats__legend  stats__legend--bottom"><sup>*</sup> — приведённые данные ложь</small>
+    </section>
+  <main>
+
+  <script src="js/main.min.js"></script>
+</body>
+</html>

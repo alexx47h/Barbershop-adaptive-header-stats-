@@ -1,0 +1,17 @@
+html {
+  background-image: url("../../src/layout/mobile.png");
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: $screen-sm) {
+  html {
+    background-image: url("../../src/layout/tablet.png");
+  }
+}
+
+@media (min-width: $screen-lg) {
+  html {
+    background-image: url("../../src/layout/desktop.png");
+  }
+}

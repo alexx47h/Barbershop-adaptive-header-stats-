@@ -1,0 +1,59 @@
+{
+  "name": "myproject",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Проект",
+  "author": "GG",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:GG/My-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GG/My-project/issues"
+  },
+  "homepage": "https://github.com/GG/My-project",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "latest",
+    "autoprefixer": "latest",
+    "browser-sync": "latest",
+    "css-mqpacker": "latest",
+    "del": "latest",
+    "gulp": "latest",
+    "gulp-csso": "latest",
+    "gulp-file-include": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-minify": "latest",
+    "gulp-plumber": "latest",
+    "gulp-postcss": "latest",
+    "gulp-rename": "latest",
+    "gulp-replace": "latest",
+    "gulp-sass": "latest",
+    "gulp-svgmin": "latest",
+    "gulp-svgstore": "latest",
+    "pixel-glass": "latest",
+    "run-sequence": "latest"
+  },
+  "scripts": {
+    "test": "editorconfig-cli",
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
+  },
+  "editorconfig-cli": [
+    "*.html",
+    "*.json",
+    "*.js",
+    "js/**/*.js",
+    "img/**/*.svg",
+    "sass/**/*.{sass,scss}"
+  ],
+  "config": {
+    "ghPages": "http://GG.github.io/myproject/index.html",
+    "directories": {
+      "source": "./src",
+      "build": "./build"
+    }
+  },
+  "engines": {
+    "node": "5.12.0"
+  }
+}

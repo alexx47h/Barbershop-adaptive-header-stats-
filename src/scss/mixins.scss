@@ -1,0 +1,115 @@
+@function rem($px, $context: $font-size-base) {
+  @if (unitless($px)) {
+    $px: $px * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return $px / $context * 1rem;
+}
+
+@function em($px, $context: $font-size-base) {
+  @if (unitless($px)) {
+    $px: $px * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return $px / $context * 1em;
+}
+
+@mixin inlineblock($valign-top: top) {
+  display: inline-block;
+
+  vertical-align: $valign-top;
+}
+
+@mixin text-overflow {
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  // word-wrap: normal;
+}
+
+@mixin text-hide {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+@mixin clearfix {
+  &::after,
+  &::before {
+    content: "";
+
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+@mixin margin($values) {
+  @include _directional-property(margin, null, $values);
+}
+
+@mixin container {
+  width: 320px;
+  margin: 0 auto;
+  @media (min-width: $screen-sm) {
+    width: 640px;
+  }
+  @media (min-width: $screen-lg) {
+    width: 960px;
+  }
+}
+
+@mixin container-fluid {
+  width: auto;
+  max-width: 100%;
+  @media (min-width: $screen-sm) {
+    width: ceil($container-tablet / $screen-sm * 100%); //640 / 768 = 0.8(3) ~= 0.84 * 100% = 84%
+    max-width: $screen-lg; // 960/0,84 ~= 1143 < 1200, ok
+    margin: 0 auto;
+  }
+  @media (min-width: $screen-lg) {
+    // @content;
+    width: ceil($container-desktop / $screen-lg * 100%); //960px / 1200px = 0.8 * 100% = 80%
+    max-width: $screen-lg + 800px; //limit
+  }
+}
+
+@mixin no-outline {
+  background: transparent;
+  outline: none;
+  &::before {
+    display: none;
+  }
+}
+
+@mixin tab-focus {
+  // WebKit-specific. Other browsers will keep their default outline style. (Initially tried to also force default via `outline: initial`, but that seems to erroneously remove the outline in Firefox altogether.)
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+@mixin img-rounded {
+  overflow: hidden;
+
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50% 50%;
+}
+
+// List options
+// [converter] extracted from `.list-unstyled` for libsass compatibility
+@mixin list-unstyled {
+  margin: 0;
+  // padding: 0;
+  padding-left: 0;
+
+  // list-style-type: none;
+  list-style: none;
+}
