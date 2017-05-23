@@ -5,5 +5,7 @@ Some commands:
 3. npm start
 
 
+
 npm install -g browser-sync
+
 browser-sync start --server
