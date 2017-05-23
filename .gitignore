@@ -5,7 +5,4 @@ Thumbs.db
 .idea
 *.sublime*
 *.log
-*.psd
 *.ai
-*.pdf
-css/*.css
