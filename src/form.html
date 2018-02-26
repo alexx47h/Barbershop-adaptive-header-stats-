@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="css/senddata.min.css">
+</head>
+<body>
+  <main class="inner-page">
+    <section class="order">
+      <form class="writing-haircut order-form" action="/echo" method="post">
+        <div class="order-form__contacts">
+          <div class="order-form__name">
+            <input class="order-form__field  order-form__field--name" type="text" name="name" placeholder="Имя">
+            <input class="order-form__field  order-form__field--name" type="text" name="surname" placeholder="Фамилия">
+          </div>
+          <div class="order-form__communications">
+            <input class="order-form__field  order-form__field--communications" type="tel" name="tel" placeholder="Контактный телефон">
+            <input class="order-form__field  order-form__field--communications" type="email" name="email" placeholder="Контактный e-mail">
+          </div>
+          <div class="order-form__information">
+            <textarea class="order-form__field  order-form__field--information" name="info-for-master" placeholder="Дополнительная информация для мастера" rows="5"></textarea>
+          </div>
+        </div>
+        <div class="writing-haircut__upload-photo">
+          <div class="writing-haircut__inner">
+            <div class="writing-haircut__uploar-text">
+              Загрузите несколько своих фотографий:<br><br>
+              <input type="file" name="images" id="upload_photo" multiple>
+            </div>
+            <div class="writing-haircut__upload-imgs upload-images">
+              <ul class="upload-images__list"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="writing-haircut__actions">
+          <button class="btn order-form__btn" type="submit">Отправить заявку</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script id="image-template" type="text/html">
+    <div class="upload-images__img-wrap">
+      <img src="{{image}}" alt="{{name}}" title="{{name}}">
+    </div>
+    <a href="#" class="upload-images__del-link" title="Удалить">
+      <i class="icon-cancel">Удалить</i>
+    </a>
+  </script>
+  <script src="js/vendor/mustache.min.js"></script>
+  <script src="js/senddata.min.js"></script>
+</body>
+</html>

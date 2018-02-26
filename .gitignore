@@ -1,7 +1,11 @@
 build/
+!build/readme.md
+build.rar
 node_modules/
+node_modules.rar
 .DS_Store
 Thumbs.db
 .idea
 *.sublime*
 *.log
+*.psd

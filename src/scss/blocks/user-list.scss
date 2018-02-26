@@ -1,0 +1,104 @@
+.user-list__login {
+  position: relative;
+
+  display: block;
+
+  padding: 17px 21px;
+  padding-left: 49px;
+
+  line-height: 18px;
+  text-decoration: none;
+  color: #fff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 21px;
+
+    width: 16px;
+    height: 16px;
+
+    background-image: url("../img/sprite.png");
+    background-position: -10px -204px;
+
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $screen-sm) {
+  .user-list {
+    width: 60px;
+  }
+
+  .user-list__login {
+    width: 60px;
+    height: 70px;
+    padding: 0;
+
+    font-size: 0;
+
+    &::before {
+      top: 29px;
+      left: 12px;
+    }
+
+    &:hover::before {
+      background-position: -10px -276px;
+    }
+
+    &:active::before {
+      background-position: -10px -204px;
+
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: $screen-lg) {
+  .user-list {
+    width: auto;
+    max-width: 160px;
+  }
+
+  .user-list__login {
+    position: relative;
+
+    width: auto;
+    height: auto;
+    padding-top: 25px;
+    padding-right: 30px;
+    padding-bottom: 23px;
+    padding-left: 50px;
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: #000;
+
+      background-color: #fff;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+
+      background-color: #fff;
+    }
+
+    &::before {
+      left: 15px;
+    }
+    &:hover::before {
+      background-position: -10px -240px;
+    }
+    &:active::before {
+      background-position: -10px -240px;
+
+      opacity: 0.1;
+    }
+  }
+}

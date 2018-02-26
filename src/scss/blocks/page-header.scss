@@ -1,3 +1,8 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+}
+
 .page-header__logo {
   height: 85px;
 
@@ -5,21 +10,16 @@
 }
 
 .page-header__logo img {
-  width: 230px;
+  width: 226px;
   height: 85px;
 }
 
 @media (min-width: $screen-sm) {
   .page-header {
-    display: flex;
-    flex-direction: column;
-
     background-color: #000;
   }
 
   .page-header__logo {
-    position: relative;
-
     order: 2;
 
     width: 100%;
@@ -32,19 +32,17 @@
 
     // @media ($retina) {
     //   background-image: url("../img/bg-retina.jpg");
-    //   background-size: 1338px auto; //указывается размер нормальной картинки
+    //   background-size: 1338px auto; //указывать р-р норм. картинки
     // }
   }
 
   .page-header__logo img {
-    position: absolute;
-    bottom: 257px;
-    left: 50%;
+    display: block;
 
     width: 370px;
     height: auto;
-
-    transform: translatex(-50%);
+    margin: 0 auto;
+    margin-top: 40px;
   }
 }
 
@@ -58,6 +56,6 @@
   }
 
   .page-header__logo img {
-    bottom: 438px;
+    margin-top: 57px;
   }
 }

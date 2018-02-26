@@ -68,10 +68,10 @@
 @mixin container-fluid {
   width: auto;
   max-width: 100%;
+  margin: 0 auto;
   @media (min-width: $screen-sm) {
     width: ceil($container-tablet / $screen-sm * 100%); //640 / 768 = 0.8(3) ~= 0.84 * 100% = 84%
     max-width: $screen-lg; // 960/0,84 ~= 1143 < 1200, ok
-    margin: 0 auto;
   }
   @media (min-width: $screen-lg) {
     // @content;

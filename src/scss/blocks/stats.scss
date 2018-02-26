@@ -1,11 +1,11 @@
 .stats {
-  background-color: #353535;
-
   @include container-fluid;
+  // width: 320px;
+  // margin: 0 auto;
 }
 
 .stats__header {
-  padding: 27px 38px;
+  padding: 27px 40px;
 
   color: #000;
 
@@ -20,6 +20,7 @@
   font-weight: bold;
   font-size: 30px;
   line-height: 30px;
+  font-weight: bold;
   text-align: center;
   text-transform: uppercase;
 }
@@ -37,39 +38,46 @@
 
   font-size: 20px;
   line-height: 20px;
+
   &--bottom {
     padding: 20px 0 14px;
 
     text-align: center;
-    color: rgba(255, 255, 255, .3);
+    color: rgba(255, 255, 255, 0.3);
 
     background-color: $gray-darker;
   }
+
   &--top {
     display: none;
   }
 }
 
 .stats__legend sup {
-  top: -.25em;
+  top: -0.25em;
 
   font-size: 90%;
 }
 
-.stats__table {
+.stats__list {
   width: 100%;
+
+  border-collapse: collapse;
 }
 
-.stats__table tr {
+.stats__list tr {
   color: #fff;
 
   background-color: #404040;
+
   &:nth-child(2) {
     background-color: #4e4e4e;
   }
+
   &:nth-child(3) {
     background-color: #353535;
   }
+
   &:nth-child(4) {
     background-color: #404040;
   }
@@ -92,9 +100,9 @@
 }
 
 .stats__value sup {
-  top: -.35em;
+  top: -0.35em;
 
-  margin-left: 15px;
+  margin-left: 5px;
 }
 
 .stats__field {
@@ -107,8 +115,7 @@
 
 @media (min-width: $screen-sm) {
   .stats {
-    position: relative;
-    z-index: 1;
+    margin-top: -185px;
   }
 
   .stats__header {
@@ -117,7 +124,8 @@
     display: flex;
     flex-flow: row wrap;
 
-    padding: 32px 40px 24px;
+    justify-content: space-between;
+
     &::before {
       content: "";
       position: absolute;
@@ -133,7 +141,7 @@
 
   .stats__slogan {
     width: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 
     font-size: 40px;
     line-height: 40px;
@@ -143,7 +151,9 @@
 
   .stats__intro {
     width: 37.5%;
-    padding: 4px 0 0 30px;
+    margin-top: 5px;
+    padding: 0;
+    padding-left: 30px;
 
     text-align: left;
   }
@@ -153,38 +163,27 @@
 
     width: 50%;
 
-    color: rgba(0, 0, 0, .3);
+    color: rgba(0, 0, 0, 0.3);
   }
 
   .stats__legend--bottom {
     display: none;
   }
 
-  .stats__table {
-    display: block;
-  }
-
-  .stats__table tbody {
+  .stats__list tbody {
     display: flex;
     flex-wrap: wrap;
   }
 
-  .stats__table tr {
-    display: block;
-
-    box-sizing: border-box;
+  .stats__list tr {
     width: 50%;
+    box-sizing: border-box;
     padding: 25px 35px 28px;
-    // box-sizing: border-box; /*или вместо box-sizing и width*/
-    // width: 50%;             /*flex-basis: 250px; flex-grow: 1;*/
-    // но учесть последний нечетный элемент в таблице -  растянется
-    // }
+    // flex-basis: 250px; flex-grow: 1; //учесть посл. нечетн. эл-т в таблице -  растянется
   }
 
-  .stats__value,
-  .stats__field {
+  .stats__list td {
     display: block;
-
     width: auto;
     padding: 0;
   }
@@ -210,17 +209,13 @@
 @media (min-width: $screen-lg) {
   .stats {
     display: flex;
-
     margin-top: -160px;
   }
 
   .stats__header {
-    flex-direction: column;
-    flex-grow: 1;
-
     width: 240px;
-    padding-right: 40px;
-    padding-left: 40px;
+    flex-grow: 1;
+    flex-direction: column;
     &::before {
       top: 22px;
     }
@@ -229,13 +224,13 @@
   .stats__slogan {
     width: auto;
     margin-bottom: 42px;
-    // padding-left: 0;
   }
 
   .stats__intro {
     width: auto;
     margin-bottom: 32px;
-    padding: 0;
+    padding-right: 30px;
+    padding-left: 0;
   }
 
   .stats__legend--top {
@@ -243,10 +238,9 @@
     margin-top: auto;
   }
 
-  .stats__table {
+  .stats__list {
     display: flex;
-    flex-grow: 1;
-
     width: 640px;
+    flex-grow: 1;
   }
 }

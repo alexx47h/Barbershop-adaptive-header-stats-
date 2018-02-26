@@ -30,7 +30,6 @@
     "gulp-sass": "latest",
     "gulp-svgmin": "latest",
     "gulp-svgstore": "latest",
-    "pixel-glass": "latest",
     "run-sequence": "latest"
   },
   "scripts": {
